@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Rimarju</title>
+
+<link rel="stylesheet" href="/static/index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="UTF-8">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+</style>
+</head>
+<body>
+  <div class = "title">
+    Rimarju
+  </div>
+  <div class = "align">
+    <div class="column main-search-input-wrap">
+      <div class="main-search-input fl-wrap">
+       
+        <div class="main-search-input-item">
+          <form name = "passdata" id = "my-form" action = '.' method ="post" id = "input-form" >
+            <input type="text"  name = "name" placeholder="Kelma li trid tirrima">
+            
+            <!-- <input type="submit" value="submit"> -->
+            <!-- <button type = "submit" class="main-search-button">Search</button> -->
+          </form>
+          
+        </div>
+        <button type = "submit" value="submit" form ="my-form" class="main-search-button">Search</button>                         
+        <!-- <script src="index.js"></script> --> 
+        </div>
+                    
+    </div>
+
+    <div class = "column return">
+        <!-- <h1>{{n}}</h1>   -->
+        Kelma: {{toRhyme}}
+        <ul>
+          {% for item in rhymes %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul> 
+  
+    </div>
+  </div>
+  
+    
+</body>
